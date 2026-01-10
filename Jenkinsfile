@@ -56,7 +56,7 @@ pipeline {
 				steps {
 					sh '''
 
-	# Start new stack
+		# Start new stack
 						docker-compose up -d --build
 						'''
 				}
