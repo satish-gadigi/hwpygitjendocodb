@@ -30,8 +30,8 @@ pipeline {
 								passwordVariable: 'DOCKER_PASS'
 								)]) {
 						sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
-							sh 'docker tag satishri/hlowd-py-gitjendocompose:${BUILD_NUMBER} satishri/hlowd-py-gitjendocompose:latest'
-							sh 'docker push satishri/hlowd-py-gitjendocompose:latest'
+							sh 'docker tag satishri/hdpygitjendocodb:${BUILD_NUMBER} satishri/hdpygitjendocodb:latest'
+							sh 'docker push satishri/hdpygitjendocodb:latest'
 					}
 				}
 			}
@@ -42,8 +42,8 @@ pipeline {
 						docker-compose -f docker-compose.yml down --remove-orphans || true
 
 # Extra safety: remove any leftover containers by name
-						docker rm -f hlowd-py-gitjendocomposedb || true
-						docker rm -f hlowd-py-gitjendocompose || true
+						docker rm -f hdpygitjendocodb_ap_1 || true
+						docker rm -f hdpygitjendocodb_db_1 || true
 						'''
 				}
 			}
