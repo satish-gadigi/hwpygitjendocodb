@@ -9,7 +9,7 @@ pipeline {
 
 					checkout([$class: 'GitSCM',
 							branches: [[name: '*/main']],
-							userRemoteConfigs: [[url: 'https://github.com/satish-gadigi/hlowd-py-gitjendocompose']]
+							userRemoteConfigs: [[url: 'https://github.com/satish-gadigi/hdpygitjendocodb.git']]
 					])
 				}
 			}
@@ -18,7 +18,7 @@ pipeline {
 
 			stage('Build') {
 				steps {
-					sh 'docker build -t satishri/hlowd-py-gitjendocompose:${BUILD_NUMBER} .'
+					sh 'docker build -t satishri/hdpygitjendocodb:${BUILD_NUMBER} .'
 				}
 			}
 
@@ -57,7 +57,7 @@ pipeline {
 					sh '''
 
 # Start new stack
-						docker-compose -f docker-compose.yml up -d --build
+						docker-compose up -d --build
 						'''
 				}
 			}		
