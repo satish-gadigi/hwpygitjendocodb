@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def get_connection():
     return psycopg2.connect(
-        dbname="hwpygitjendocodb_local_DB",
+        dbname="hwpygitjendocodb_db",
         user="satish",
         password="secret",
         host="db",   # service name from docker-compose.yml
