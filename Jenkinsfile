@@ -9,7 +9,7 @@ pipeline {
 
 					checkout([$class: 'GitSCM',
 							branches: [[name: '*/main']],
-							userRemoteConfigs: [[url: 'https://github.com/satish-gadigi/hdpygitjendocodb.git']]
+							userRemoteConfigs: [[url: 'https://github.com/satish-gadigi/hwpygitjendocodb.git']]
 					])
 				}
 			}
