@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build: .
-    image: satishri/hwpygitjendocodb_local:latest
+    image: satishri/hwpygitjendocodb:latest
       # Removing containers names here onwards
       # container_name: hlowd-py-gitjendocompose
     ports:
@@ -17,7 +17,7 @@ services:
     environment:
       POSTGRES_USER: satish
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: hwpygitjendocodb_local_DB
+      POSTGRES_DB: hwpygitjendocodb_db
     volumes:
       - db_data:/var/lib/postgresql/data
 
