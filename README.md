@@ -5,3 +5,4 @@ switch to the relevent database with below query
 docker exec -it hwpygitjendocodb_db_1 psql -U satish -d hwpygitjendocodb_db 
 list the tables with \dt
 check the inserted data with select * from messages;
+---Dev Branch---
